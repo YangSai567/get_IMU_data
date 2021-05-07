@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>惯性采集与测量</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Icon.ico</normaloff>Icon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="threadAButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>100</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开IMU</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="threadBButton">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>90</y>
+      <width>100</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>校准IMU1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="quitButton">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>640</y>
+      <width>150</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>19</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>退出程序</string>
+    </property>
+   </widget>
+   <widget class="myopenGL" name="IMU1Disp" native="true">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>10</y>
+      <width>300</width>
+      <height>300</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="myopenGL1" name="IMU2Disp" native="true">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>320</y>
+      <width>300</width>
+      <height>300</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ipaddrInput">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>20</y>
+      <width>160</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>127.0.0.1</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ipaddrSet">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>67</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>IP地址:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="portSet">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>20</y>
+      <width>51</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>端口:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="portInput">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>20</y>
+      <width>61</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>5566</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="netStart">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>20</y>
+      <width>90</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>连接</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="datRecBtn">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>20</y>
+      <width>101</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>记录数据</string>
+    </property>
+   </widget>
+   <widget class="uplimbDispThread" name="uplimbDisp" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>170</y>
+      <width>500</width>
+      <height>500</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="offsetButton">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>90</y>
+      <width>100</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OFFSET1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imu1pwrlabel">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>640</y>
+      <width>121</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>IMU1:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imu2pwrlabel">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>670</y>
+      <width>121</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>IMU2:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="angleCalButton">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>90</y>
+      <width>100</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>角度计算</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="offerset1Button">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>90</y>
+      <width>100</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OFFSET2</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>myopenGL</class>
+   <extends>QWidget</extends>
+   <header>myopengl.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>myopenGL1</class>
+   <extends>QWidget</extends>
+   <header>myopengl1.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>uplimbDispThread</class>
+   <extends>QWidget</extends>
+   <header>uplimbdispthread.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
